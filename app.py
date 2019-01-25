@@ -273,7 +273,7 @@ def handle_message(event):
     elif (text == '!SeGame MLBB Team') or (text == 'SeGame MLBB Team') or (text == 'Segame mlbb team'):
         buttons_template = TemplateSendMessage(
             alt_text = "SeGame MLBB Team",
-            template = ButtonTemplate(
+            template = ButtonsTemplate(
                 title = "Mobile Legend Team",
                 text = "Klik dibawah ini untuk melihat informasi team kami",
                 actions = [
