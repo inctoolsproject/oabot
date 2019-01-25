@@ -262,7 +262,7 @@ def handle_message(event):
                 actions = [
                     MessageTemplateAction(
                         label = 'Mobile Legend',
-                        text = '!SeGame MLBB Team'
+                        text = '!mlbb team'
                     )
                 ]
             )
@@ -270,7 +270,7 @@ def handle_message(event):
         line_bot_api.reply_message(token, buttons_template)
 
 
-    elif (text == '!SeGame MLBB Team') or (text == 'SeGame MLBB Team') or (text == 'Segame mlbb team'):
+    elif (text == '!mlbb team') or (text == 'Mlbb Team') or (text == 'mlbb team'):
         buttons_template = TemplateSendMessage(
             alt_text = "SeGame MLBB Team",
             template = ButtonsTemplate(
