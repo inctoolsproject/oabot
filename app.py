@@ -276,11 +276,8 @@ def handle_message(event):
             template = ButtonsTemplate(
                 title = "Mobile Legend Team",
                 text = "Klik dibawah ini untuk melihat informasi team kami",
-                thumbnail_image_url = "http://www.segameesports.com/assets/img/games/ML-Logo.png",
+                thumbnail_image_url="http://www.segameesports.com/assets/img/games/ML-Logo.png",
                 actions = [
-                    URITemplateAction(
-                        uri = "http://www.segameesports.com/assets/img/games/ML-Logo.png"
-                    ),
                     MessageTemplateAction(
                         label = "Next Generation",
                         text = "!next generation team"
