@@ -282,11 +282,11 @@ def handle_message(event):
                         text = "!next generation team"
                     ),
                     MessageTemplateAction(
-                        lebel = "The Raven",
+                        label = "The Raven",
                         text = "!the raven team"
                     ),
                     MessageTemplateAction(
-                        lebel = "Hunger Strike",
+                        label = "Hunger Strike",
                         text = "!hunger strike team"
                     )
                 ]
