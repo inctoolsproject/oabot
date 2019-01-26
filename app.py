@@ -295,7 +295,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, message_2)
 
     elif (text == '!next generation team') or (text == '!the raven team') or (text == '!hunger strike team'):
-        token = event.reply_message
+        token = event.reply_token
         text_message = TextSendMessage(text = 'Comming Soon')
         line_bot_api.reply_message(token, text_message)
 #=====[ CAROUSEL MESSAGE ]==========
