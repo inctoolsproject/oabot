@@ -295,7 +295,7 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, message_2)
 
-    elif  event.message.text == "!the raven team":
+    elif (text == "!the raven team") or (text == "the raven team") or (text == "The raven team"):
         message = TemplateSendMessage(
             thumbnail_image_url = "http://www.segameesports.com/assets/img/games/ML-Logo.png",
             alt_text = "THE RAVEN TEAM",
