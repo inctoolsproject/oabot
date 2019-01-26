@@ -274,9 +274,9 @@ def handle_message(event):
         message_2 = TemplateSendMessage(
             alt_text = "SeGame MLBB Team",
             template = ButtonsTemplate(
-                thumbnail_image_url = "http://www.segameesports.com/assets/img/games/ML-Logo.png",
                 title = "Mobile Legend Team",
-                text = "Klik dibawah ini untuk melihat informasi team kami"
+                text = "Klik dibawah ini untuk melihat informasi team kami",
+                thumbnail_image_url = "http://www.segameesports.com/assets/img/games/ML-Logo.png",
                 actions = [
                     MessageTemplateAction(
                         label = "Next Generation",
