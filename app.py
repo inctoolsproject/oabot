@@ -270,8 +270,8 @@ def handle_message(event):
         line_bot_api.reply_message(token, buttons_template)
 
 
-    elif (text == '!mlbb team') or (text == 'Mlbb Team') or (text == 'mlbb team'):
-        buttons_template = TemplateSendMessage(
+    if event.message.text == '!mlbb team':
+        message_2 = TemplateSendMessage(
             alt_text = "SeGame MLBB Team",
             template = ButtonsTemplate(
                 title = "Mobile Legend Team",
@@ -292,7 +292,7 @@ def handle_message(event):
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token, buttons_template)
+        line_bot_api.reply_message(event.reply_token, message_2)
 
     elif (text == '!next generation team') or (text == '!the raven team') or (text == '!hunger strike team'):
         token = event.reply_message
