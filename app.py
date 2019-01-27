@@ -547,7 +547,7 @@ def handle_message(event):
         r = requests.get("http://ryns-api.herokuapp.com/joox?q={}".format(query))
         data = r.text
         data = json.loads(data)
-        data = ["result"]
+        data_2 = data["result"]
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
