@@ -558,7 +558,7 @@ def handle_message(event):
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data_2[0]["url"])
+                                uri = "{}".format(data2[0]["url"])
                             )
                         ]
                     ),
