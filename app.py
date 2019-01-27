@@ -541,7 +541,7 @@ def handle_message(event):
 
 # [MUSIK COMMAND]
 
-    elif (text == "!musik") or (text == "!Musik"):
+    elif event.message.text == "!musik":
         sep = event.message.text.split(" ")
         query = event.message.text.replace(sep[0] + " ","")
         r = requests.get("http://ryns-api.herokuapp.com/joox?q={}".format(query))
