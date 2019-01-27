@@ -553,57 +553,57 @@ def handle_message(event):
             template = CarouselTemplate(
                 columns = [
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data["img"][0]),
-                        title = "{}".format(data["title"][0]),
-                        text = "{}".format(data["artis"][0]),
+                        thumbnail_image_url = "{}".format(data[0]["img"]),
+                        title = "{}".format(data[0]["title"]),
+                        text = "{}".format(data[0]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data["url"][0])
+                                uri = "{}".format(data[0]["url"])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data["img"][1]),
-                        title = "{}".format(data["title"][1]),
-                        text = "{}".format(data["artis"][1]),
+                        thumbnail_image_url = "{}".format(data[1]["img"]),
+                        title = "{}".format(data[1]["title"]),
+                        text = "{}".format(data[1]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data["url"][1])
+                                uri = "{}".format(data[1]["url"])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data["img"][2]),
-                        title = "{}".format(data["title"][2]),
-                        text = "{}".format(data["artis"][2]),
+                        thumbnail_image_url = "{}".format(data[2]["img"][2]),
+                        title = "{}".format(data[2]["title"]),
+                        text = "{}".format(data[2]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data["url"][2])
+                                uri = "{}".format(data[2]["url"])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data["img"][3]),
-                        title = "{}".format(data["title"][3]),
-                        text = "{}".format(data["artis"][3]),
+                        thumbnail_image_url = "{}".format(data[3]["img"]),
+                        title = "{}".format(data[3]["title"]),
+                        text = "{}".format(data[3]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data["url"][3])
+                                uri = "{}".format(data[3]["url"])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data["img"][4]),
-                        title = "{}".format(data["title"][4]),
-                        text = "{}".format(data["artis"][4]),
+                        thumbnail_image_url = "{}".format(data[4]["img"]),
+                        title = "{}".format(data[4]["title"]),
+                        text = "{}".format(data[4]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data["url"][4])
+                                uri = "{}".format(data[4]["url"])
                             )
                         ]
                     )
