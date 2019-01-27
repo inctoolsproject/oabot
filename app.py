@@ -552,28 +552,27 @@ def handle_message(event):
         if jumlah > 10:
             jumlah = 10
         else:
-            pass
-        for x in range(0, jumlah):
-            item = CarouselColumn(
-                thumbnail_image_url = "{}".format(data[x]["img"]),
-                title = "{}".format(data[x]["title"]),
-                text = "{}".format(data[x]["artis"]),
-                actions = [
-                    URITemplateAction(
-                        label = "DOWNLOAD DISINI",
-                        uri = "{}".format(data[x]["url"])
-                    )
-                ]
-            ),
+            pass 
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
                 columns = [ 
-                    item
+                    for x in range(0, jumlah):
+                        CarouselColumn(
+                            thumbnail_image_url = "{}".format(data[x]["img"]),
+                            title = "{}".format(data[x]["title"]),
+                            text = "{}".format(data[x]["artis"]),
+                            actions = [
+                                URITemplateAction(
+                                    label = "DOWNLOAD DISINI",
+                                    uri = "{}".format(data[x]["url"])
+                            )
+                        ]
+                    ),
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.reply_message(event.reply_token, message)  
 
 #=====[ FLEX MESSAGE ]==========
     # elif text == "yud test":
