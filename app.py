@@ -556,9 +556,9 @@ def handle_message(event):
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
-                columns = [ 
+                columns =  
                     for x in range(0, jumlah):
-                        CarouselColumn(
+                        item = CarouselColumn(
                             thumbnail_image_url = "{}".format(data[x]["img"]),
                             title = "{}".format(data[x]["title"]),
                             text = "{}".format(data[x]["artis"]),
@@ -566,10 +566,9 @@ def handle_message(event):
                                 URITemplateAction(
                                     label = "DOWNLOAD DISINI",
                                     uri = "{}".format(data[x]["url"])
-                            )
-                        ]
-                    ),
-                ]
+                        )
+                    ]
+                ),
             )
         )
         line_bot_api.reply_message(event.reply_token, message)  
