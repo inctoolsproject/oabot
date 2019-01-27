@@ -547,63 +547,63 @@ def handle_message(event):
         r = requests.get("http://ryns-api.herokuapp.com/joox?q={}".format(query))
         data = r.text
         data = json.loads(data)
-        data_2 = data["result"]
+        data2 = data["result"]
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
                 columns = [
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[0]["img"]),
-                        title = "{}".format(data[0]["title"]),
-                        text = "{}".format(data[0]["artis"]),
+                        thumbnail_image_url = "{}".format(data2[0]["img"]),
+                        title = "{}".format(data2[0]["title"]),
+                        text = "{}".format(data2[0]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[0]["url"])
+                                uri = "{}".format(data_2[0]["url"])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[1]["img"]),
-                        title = "{}".format(data[1]["title"]),
-                        text = "{}".format(data[1]["artis"]),
+                        thumbnail_image_url = "{}".format(data2[1]["img"]),
+                        title = "{}".format(data2[1]["title"]),
+                        text = "{}".format(data2[1]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[1]["url"])
+                                uri = "{}".format(data2[1]["url"])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[2]["img"][2]),
-                        title = "{}".format(data[2]["title"]),
-                        text = "{}".format(data[2]["artis"]),
+                        thumbnail_image_url = "{}".format(data2[2]["img"][2]),
+                        title = "{}".format(data2[2]["title"]),
+                        text = "{}".format(data2[2]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[2]["url"])
+                                uri = "{}".format(data2[2]["url"])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[3]["img"]),
-                        title = "{}".format(data[3]["title"]),
-                        text = "{}".format(data[3]["artis"]),
+                        thumbnail_image_url = "{}".format(data2[3]["img"]),
+                        title = "{}".format(data2[3]["title"]),
+                        text = "{}".format(data2[3]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[3]["url"])
+                                uri = "{}".format(data2[3]["url"])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[4]["img"]),
-                        title = "{}".format(data[4]["title"]),
-                        text = "{}".format(data[4]["artis"]),
+                        thumbnail_image_url = "{}".format(data2[4]["img"]),
+                        title = "{}".format(data2[4]["title"]),
+                        text = "{}".format(data2[4]["artis"]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[4]["url"])
+                                uri = "{}".format(data2[4]["url"])
                             )
                         ]
                     )
