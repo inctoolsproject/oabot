@@ -553,57 +553,57 @@ def handle_message(event):
             template = CarouselTemplate(
                 columns = [
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[x]["img"][0]),
-                        title = "{}".format(data[x]["title"][0]),
-                        text = "{}".format(data[x]["artis"][0]),
+                        thumbnail_image_url = "{}".format(data["img"][0]),
+                        title = "{}".format(data["title"][0]),
+                        text = "{}".format(data["artis"][0]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[x]["url"][0])
+                                uri = "{}".format(data["url"][0])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[x]["img"][1]),
-                        title = "{}".format(data[x]["title"][1]),
-                        text = "{}".format(data[x]["artis"][1]),
+                        thumbnail_image_url = "{}".format(data["img"][1]),
+                        title = "{}".format(data["title"][1]),
+                        text = "{}".format(data["artis"][1]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[x]["url"][1])
+                                uri = "{}".format(data["url"][1])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[x]["img"][2]),
-                        title = "{}".format(data[x]["title"][2]),
-                        text = "{}".format(data[x]["artis"][2]),
+                        thumbnail_image_url = "{}".format(data["img"][2]),
+                        title = "{}".format(data["title"][2]),
+                        text = "{}".format(data["artis"][2]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[x]["url"][2])
+                                uri = "{}".format(data["url"][2])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[x]["img"][3]),
-                        title = "{}".format(data[x]["title"][3]),
-                        text = "{}".format(data[x]["artis"][3]),
+                        thumbnail_image_url = "{}".format(data["img"][3]),
+                        title = "{}".format(data["title"][3]),
+                        text = "{}".format(data["artis"][3]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[x]["url"][3])
+                                uri = "{}".format(data["url"][3])
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data[x]["img"][4]),
-                        title = "{}".format(data[x]["title"][4]),
-                        text = "{}".format(data[x]["artis"][4]),
+                        thumbnail_image_url = "{}".format(data["img"][4]),
+                        title = "{}".format(data["title"][4]),
+                        text = "{}".format(data["artis"][4]),
                         actions = [
                             URITemplateAction(
                                 label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data[x]["url"][4])
+                                uri = "{}".format(data["url"][4])
                             )
                         ]
                     )
