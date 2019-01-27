@@ -548,27 +548,66 @@ def handle_message(event):
         data = r.text
         data = json.loads(data)
         data = ["result"]
-        jumlah = len(data)
-        if jumlah > 10:
-            jumlah = 10
-        else:
-            pass 
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
-                columns =  
-                    for x in range(0, jumlah):
-                        item = CarouselColumn(
-                            thumbnail_image_url = "{}".format(data[x]["img"]),
-                            title = "{}".format(data[x]["title"]),
-                            text = "{}".format(data[x]["artis"]),
-                            actions = [
-                                URITemplateAction(
-                                    label = "DOWNLOAD DISINI",
-                                    uri = "{}".format(data[x]["url"])
-                        )
-                    ]
-                ),
+                columns = [
+                    CarouselColumn(
+                        thumbnail_image_url = "{}".format(data[x]["img"][0]),
+                        title = "{}".format(data[x]["title"][0]),
+                        text = "{}".format(data[x]["artis"][0]),
+                        actions = [
+                            URITemplateAction(
+                                label = "DOWNLOAD DISINI",
+                                uri = "{}".format(data[x]["url"][0])
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url = "{}".format(data[x]["img"][1]),
+                        title = "{}".format(data[x]["title"][1]),
+                        text = "{}".format(data[x]["artis"][1]),
+                        actions = [
+                            URITemplateAction(
+                                label = "DOWNLOAD DISINI",
+                                uri = "{}".format(data[x]["url"][1])
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url = "{}".format(data[x]["img"][2]),
+                        title = "{}".format(data[x]["title"][2]),
+                        text = "{}".format(data[x]["artis"][2]),
+                        actions = [
+                            URITemplateAction(
+                                label = "DOWNLOAD DISINI",
+                                uri = "{}".format(data[x]["url"][2])
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url = "{}".format(data[x]["img"][3]),
+                        title = "{}".format(data[x]["title"][3]),
+                        text = "{}".format(data[x]["artis"][3]),
+                        actions = [
+                            URITemplateAction(
+                                label = "DOWNLOAD DISINI",
+                                uri = "{}".format(data[x]["url"][3])
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url = "{}".format(data[x]["img"][4]),
+                        title = "{}".format(data[x]["title"][4]),
+                        text = "{}".format(data[x]["artis"][4]),
+                        actions = [
+                            URITemplateAction(
+                                label = "DOWNLOAD DISINI",
+                                uri = "{}".format(data[x]["url"][4])
+                            )
+                        ]
+                    )
+                ]
             )
         )
         line_bot_api.reply_message(event.reply_token, message)  
