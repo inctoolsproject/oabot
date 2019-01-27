@@ -574,7 +574,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "{}".format(data2[2]["img"][2]),
+                        thumbnail_image_url = "{}".format(data2[2]["img"]),
                         title = "{}".format(data2[2]["title"]),
                         text = "{}".format(data2[2]["artis"]),
                         actions = [
