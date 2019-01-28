@@ -553,7 +553,7 @@ def handle_message(event):
             jmlh = 10
         else:
             pass
-        for x in range(0,jmlh)
+        for x in range(0,jmlh):
             item = CarouselColumn(
                 thumbnail_image_url = "{}".format(str(data[x]["img"])),
                 title = "{}".format(str(data[x]["title"])),
