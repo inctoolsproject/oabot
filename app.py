@@ -549,6 +549,7 @@ def handle_message(event):
         data = json.loads(data)
         data2 = data["result"]
         jmlh = len (data2)
+        datalagu = []
         if jmlh > 10:
             jmlh = 10
         else:
@@ -565,10 +566,11 @@ def handle_message(event):
                     )
                 ]
             ),
+            datalagu.append(item)
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
-                columns = [ item ]
+                columns = [ datalagu ]
             )
         )
         line_bot_api.reply_message(event.reply_token, message)  
