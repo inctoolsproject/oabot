@@ -558,7 +558,7 @@ def handle_message(event):
                 thumbnail_image_url = "{}".format(str(data[x]["img"])),
                 title = "{}".format(str(data[x]["title"])),
                 text = "{}".format(str(data[x]["artis"])),
-                actions [
+                actions = [
                     URITemplateAction(
                         label = "DOWNLOAD LINK",
                         uri = "{}".format(str(data[x]["url"]))
