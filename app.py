@@ -194,6 +194,7 @@ def handle_message(event):
         
     #     line_bot_api.reply_message(event.reply_token, buttons_template)
     elif (text == "!help") or (text == "help") or (text == "Help"):
+
         buttons_template = TemplateSendMessage(
             alt_text =" Help message",
             template = ButtonsTemplate(
@@ -547,66 +548,27 @@ def handle_message(event):
         data = r.text
         data = json.loads(data)
         data2 = data["result"]
+        jmlh = len (data2)
+        if jmlh > 10:
+            jmlh = 10
+        else:
+            pass
+        for x in range(0,jmlh)
+            item = CarouselColumn(
+                thumbnail_image_url = "{}".format(str(data[x]["img"])),
+                title = "{}".format(str(data[x]["title"])),
+                text = "{}".format(str(data[x]["artis"])),
+                actions [
+                    URITemplateAction(
+                        label = "DOWNLOAD LINK",
+                        uri = "{}".format(str(data[x]["url"]))
+                    )
+                ]
+            ),
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
-                columns = [
-                    CarouselColumn(
-                        thumbnail_image_url = "{}".format(data2[0]["img"]),
-                        title = "{}".format(data2[0]["title"]),
-                        text = "{}".format(data2[0]["artis"]),
-                        actions = [
-                            URITemplateAction(
-                                label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data2[0]["url"])
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "{}".format(data2[1]["img"]),
-                        title = "{}".format(data2[1]["title"]),
-                        text = "{}".format(data2[1]["artis"]),
-                        actions = [
-                            URITemplateAction(
-                                label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data2[1]["url"])
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "{}".format(data2[2]["img"]),
-                        title = "{}".format(data2[2]["title"]),
-                        text = "{}".format(data2[2]["artis"]),
-                        actions = [
-                            URITemplateAction(
-                                label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data2[2]["url"])
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "{}".format(data2[3]["img"]),
-                        title = "{}".format(data2[3]["title"]),
-                        text = "{}".format(data2[3]["artis"]),
-                        actions = [
-                            URITemplateAction(
-                                label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data2[3]["url"])
-                            )
-                        ]
-                    ),
-                    CarouselColumn(
-                        thumbnail_image_url = "{}".format(data2[4]["img"]),
-                        title = "{}".format(data2[4]["title"]),
-                        text = "{}".format(data2[4]["artis"]),
-                        actions = [
-                            URITemplateAction(
-                                label = "DOWNLOAD DISINI",
-                                uri = "{}".format(data2[4]["url"])
-                            )
-                        ]
-                    )
-                ]
+                columns = [ item ]
             )
         )
         line_bot_api.reply_message(event.reply_token, message)  
