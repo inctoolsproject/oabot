@@ -369,6 +369,17 @@ def handle_message(event):
                                 uri = "https://cdn.pbrd.co/images/HYgumHa.png"
                             )
                         ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url = "https://cdn.pbrd.co/images/HYgumHa.png",
+                        title = "Sibor",
+                        text = "The Raven Member\nKlik dibawah ini untuk melihat profile",
+                        actions = [
+                            URITemplateAction(
+                                label = "CEK PROFILE",
+                                uri = "https://cdn.pbrd.co/images/HYgumHa.png"
+                            )
+                        ]
                     )
                 ]
             )
@@ -546,7 +557,7 @@ def handle_message(event):
 
     elif "!musik " in event.message.text:
         query = event.message.text.replace("!musik ","")
-        r = requests.get("https://ryns-api.herokuapp.com/joox?q={}".format(query))
+        r = requests.get("https://api.boteater.co/joox?search={}".format(query))
         data = r.text
         data = json.loads(data)
         data2 = data["result"]
@@ -559,12 +570,12 @@ def handle_message(event):
         for x in range(0,jmlh):
             item = CarouselColumn(
                 thumbnail_image_url = "{}".format(str(data2[x]["img"])),
-                title = "{}".format(str(data2[x]["title"])),
+                title = "{}".format(str(data2[x]["judul"])),
                 text = "{}".format(str(data2[x]["artis"])),
                 actions = [
-                    URITemplateAction(
-                        label = "DOWNLOAD LINK",
-                        uri = "{}".format(str(data2[x]["url"]))
+                    MessageTemplateAction(
+                        label = "SHOW MUSIC",
+                        text = "{}".format(str(data2[x]["link"] != "https://api.boteater.co/joox/single/"))
                     )
                 ]
             ),
@@ -577,6 +588,8 @@ def handle_message(event):
         )
         line_bot_api.reply_message(event.reply_token, message)  
 
+
+    elif "https://api.boteater.co/joox/single/"
 #=====[ FLEX MESSAGE ]==========
     # elif text == "yud test":
     #     message = ImagemapSendMessage(
