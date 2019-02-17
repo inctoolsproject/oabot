@@ -194,37 +194,49 @@ def handle_message(event):
         
     #     line_bot_api.reply_message(event.reply_token, buttons_template)
     elif (text == "!help") or (text == "help") or (text == "Help"):
-
-        buttons_template = TemplateSendMessage(
+        message = TemplateSendMessage(
             alt_text =" Help message",
             template = ButtonsTemplate(
-                title = "LIST HELP",
-                text = "silahkan pilih, tekan tombol dibawah ini",
-                actions = [
-                    MessageTemplateAction(
-                        label = "About Us",
-                        text = "!About us"
+                columns = [
+                    CarouselColumn(
+                        title = "SeGame List Menu",
+                        text = "Silahkan pilih, tekan tombol dibawah ini",
+                        actions = [
+                            MessageTemplateAction(
+                                label = "About Us",
+                                text = "!about Us"
+                            ),
+                            MessageTemplateAction(
+                                label = "Gabung Discord",
+                                text = "!gabung discord"
+                            ),
+                            MessageTemplateAction(
+                                label = "Bot bye",
+                                text = "!segame-bye"
+                            ),
+                            MessageTemplateAction(
+                                label = "Random anime music",
+                                text = "!random-anime-music"
+                            )
+                        ]
                     ),
-                    MessageTemplateAction(
-                        label = "Gabung Discord",
-                        text = "!gabung discord"
-                    ),
-                    MessageTemplateAction(
-                        label = "Bot bye",
-                        text = "!segame-bye"
-                    ),
-                    MessageTemplateAction(
-                        label = "Random anime music",
-                        text = "!random-anime-music"
+                    CarouselColumn(
+                        title = "SeGame List Menu 2",
+                        text = "Silahkan pilih, tekan tombol dibawah ini",
+                        actions = [
+                            MessageTemplateAction(
+                                label = "Our Team",
+                                text = "!our team"
+                            )
+                        ]
                     )
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token, buttons_template)
+        line_bot_api.reply_message(event.reply_token, message)
 
 
-
-    elif (text == "!About us") or (text == "About us") or (text == "about us"):
+    elif (text == "!About us") or (text == "!about us") or (text == "About us") or (text == "about us"):
         buttons_template = TemplateSendMessage(
             alt_text =" Help message",
             template = ButtonsTemplate(
