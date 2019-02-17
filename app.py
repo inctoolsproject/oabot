@@ -576,7 +576,7 @@ def handle_message(event):
                     MessageTemplateAction(
                         label = "SHOW MUSIC",
                         text = "{}".format(str(data2[x]["link"]))
-                    )
+                    ),
                     URITemplateAction(
                         label = "SHOW DATA",
                         uri = "{}".format(str(data[x]["link"]))
