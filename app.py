@@ -195,8 +195,9 @@ def handle_message(event):
     #     line_bot_api.reply_message(event.reply_token, buttons_template)
     elif (text == "!help") or (text == "help") or (text == "Help"):
         message = TemplateSendMessage(
+            thumbnail_image_url = "https://i.ibb.co/fpgLpGb/Se-Game-Discord-Logo.png",
             alt_text =" Help message",
-            template = ButtonsTemplate(
+            template = CarouselTemplate(
                 columns = [
                     CarouselColumn(
                         title = "SeGame List Menu",
@@ -221,6 +222,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
+                        thumbnail_image_url = "https://i.ibb.co/fpgLpGb/Se-Game-Discord-Logo.png",
                         title = "SeGame List Menu 2",
                         text = "Silahkan pilih, tekan tombol dibawah ini",
                         actions = [
