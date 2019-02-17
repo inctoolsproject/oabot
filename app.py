@@ -195,7 +195,7 @@ def handle_message(event):
     #     line_bot_api.reply_message(event.reply_token, buttons_template)
     elif (text == "!help") or (text == "help") or (text == "Help"):
         message = TemplateSendMessage(
-            alt_text =" Help message",
+            alt_text ="Help message",
             template = CarouselTemplate(
                 columns = [
                     CarouselColumn(
@@ -203,14 +203,6 @@ def handle_message(event):
                         title = "SeGame Menu",
                         text = "Silahkan pilih\nTekan tombol dibawah ini",
                         actions = [
-                            MessageTemplateAction(
-                                label = "About Us",
-                                text = "!about Us"
-                            ),
-                            MessageTemplateAction(
-                                label = "Gabung Discord",
-                                text = "!gabung discord"
-                            ),
                             MessageTemplateAction(
                                 label = "Random anime music",
                                 text = "!random-anime-music"
@@ -222,10 +214,6 @@ def handle_message(event):
                         title = "SeGame Menu 2",
                         text = "Silahkan pilih, tekan tombol dibawah ini",
                         actions = [
-                            MessageTemplateAction(
-                                label = "Our Team",
-                                text = "!our team"
-                            ),
                             MessageTemplateAction(
                                 label = "Keluarkan bot",
                                 text = "!segame-Bye"
