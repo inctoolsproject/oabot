@@ -579,7 +579,7 @@ def handle_message(event):
                     ),
                     URITemplateAction(
                         label = "SHOW DATA",
-                        uri = "{}".format(str(data[x]["link"]))
+                        uri = "{}".format(str(data2[x]["link"]))
                     )
                 ]
             ),
