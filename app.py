@@ -569,6 +569,7 @@ def handle_message(event):
             pass
         for x in range(0,jmlh):
             item = CarouselColumn(
+                thumbnail_image_url = "https://vectorlogo4u.com/wp-content/uploads/2018/12/Joox-Music-Vector-Logo-720x340.png"
                 title = "{}".format(str(data2[x]["judul"])),
                 text = "{}".format(str(data2[x]["artis"])),
                 actions = [
