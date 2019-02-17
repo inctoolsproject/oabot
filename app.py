@@ -568,18 +568,15 @@ def handle_message(event):
         else:
             pass
         for x in range(0,jmlh):
+            num = 0
+            num += 1
             item = CarouselColumn(
-                thumbnail_image_url = "https://vectorlogo4u.com/wp-content/uploads/2018/12/Joox-Music-Vector-Logo-720x340.png",
                 title = "{}".format(str(data2[x]["judul"])),
                 text = "{}".format(str(data2[x]["artis"])),
                 actions = [
                     MessageTemplateAction(
-                        label = "SHOW MUSIC",
+                        label = "{}. SHOW MUSIC".format(str(num)),
                         text = "{}".format(str(data2[x]["link"]))
-                    ),
-                    URITemplateAction(
-                        label = "SHOW DATA",
-                        uri = "{}".format(str(data2[x]["link"]))
                     )
                 ]
             ),
@@ -587,8 +584,7 @@ def handle_message(event):
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
-                columns = [ (datalagu) 
-                ]
+                columns = [ (datalagu) ]
             )
         )
         line_bot_api.reply_message(event.reply_token, message)  
