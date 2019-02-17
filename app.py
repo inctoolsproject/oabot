@@ -574,7 +574,7 @@ def handle_message(event):
                 actions = [
                     MessageTemplateAction(
                         label = "SHOW MUSIC",
-                        text = "{}".format(str(data2[x]["link"] != "https://api.boteater.co/joox/single/"))
+                        text = "{}".format(str(data2[x]["link"]))
                     )
                 ]
             ),
