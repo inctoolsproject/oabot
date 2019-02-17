@@ -212,10 +212,6 @@ def handle_message(event):
                                 text = "!gabung discord"
                             ),
                             MessageTemplateAction(
-                                label = "Bot bye",
-                                text = "!segame-bye"
-                            ),
-                            MessageTemplateAction(
                                 label = "Random anime music",
                                 text = "!random-anime-music"
                             )
@@ -229,6 +225,10 @@ def handle_message(event):
                             MessageTemplateAction(
                                 label = "Our Team",
                                 text = "!our team"
+                            ),
+                            MessageTemplateAction(
+                                label = "Keluarkan bot",
+                                text = "!segame-Bye"
                             )
                         ]
                     )
