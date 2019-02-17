@@ -577,13 +577,18 @@ def handle_message(event):
                         label = "SHOW MUSIC",
                         text = "{}".format(str(data2[x]["link"]))
                     )
+                    URITemplateAction(
+                        label = "SHOW DATA",
+                        uri = "{}".format(str(data[x]["link"]))
+                    )
                 ]
             ),
             datalagu.append(item)
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
-                columns = [ (datalagu) ]
+                columns = [ (datalagu) 
+                ]
             )
         )
         line_bot_api.reply_message(event.reply_token, message)  
