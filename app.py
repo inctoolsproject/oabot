@@ -569,7 +569,7 @@ def handle_message(event):
         for x in range(0,jmlh):
             item = MessageTemplateAction(
                 label = "{}".format(str(data2[x]["judul"])),
-                text = "{}".format
+                text = "!musik code {}".format(str(data2[x]["link"] != "https://api.boteater.co/joox/single/"))
             ),
             datalagu.append(item)
         message = TemplateSendMessage(
