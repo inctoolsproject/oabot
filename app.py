@@ -571,10 +571,10 @@ def handle_message(event):
             item = CarouselColumn(
                 thumbnail_image_url = "https://i0.wp.com/lalalafest.com/wp-content/uploads/2018/03/joox-logo-tagline-script-cmyk-2-black.png?ssl=1",
                 title = "{}".format(str(data2[x]["judul"])),
-                text = "{}".format(str(data2[x]["songid"])),
+                text = "Klik lagu dibawah ini untuk mendengarkan\n{}".format(str(data2[x]["songid"])),
                 actions = [
                     MessageTemplateAction(
-                        label = "SHOW MUSIC",
+                        label = "{}".format(str(data2[x]["judul"])),
                         text = "!music code {}".format(str(data2[x]["songid"]))
                     )
                 ]
