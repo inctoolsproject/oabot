@@ -577,9 +577,7 @@ def handle_message(event):
             template = ButtonsTemplate(
                 title = "SeGame Search Music",
                 text = "Powered By : JOOX\nThanks To : BOTEATER",
-                actions = [
-                    (str(datalagu))
-                ]
+                actions = (str(datalagu))
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
