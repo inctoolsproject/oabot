@@ -554,37 +554,44 @@ def handle_message(event):
 #===============================
 
 # [MUSIK COMMAND]
+
     elif "!musik " in event.message.text:
         query = event.message.text.replace("!musik ","")
-        r = requests.get("https://api.boteater.co/joox?search={}".format(query))
+        r = requests.get("http://api.fckveza.com/jooxmusic={}".format(query))
         data = r.text
         data = json.loads(data)
         data2 = data["result"]
-        jmlh = len(data2)
+        jmlh = len (data2)
         datalagu = []
-        if jmlh > 4:
-            jmlh = 4
+        if jmlh > 10:
+            jmlh = 10
         else:
             pass
         for x in range(0,jmlh):
-            item = MessageTemplateAction(
-                label = "{}".format(str(data2[x]["judul"])),
-                text = "!musik code {}".format(str(data2[x]["link"]))
+            item = CarouselColumn(
+                thumbnail_image_url = "https://i0.wp.com/lalalafest.com/wp-content/uploads/2018/03/joox-logo-tagline-script-cmyk-2-black.png?ssl=1",
+                title = "{}".format(str(data2[x]["judul"])),
+                text = "{}".format(str(data2[x]["songid"])),
+                actions = [
+                    MessageTemplateAction(
+                        label = "SHOW MUSIC",
+                        text = "!music code {}".format(str(data2[x]["songid"]))
+                    )
+                ]
             ),
             datalagu.append(item)
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
-            template = ButtonsTemplate(
-                title = "SeGame Search Music",
-                text = "Powered By : JOOX\nThanks To : BOTEATER",
-                actions = (str(datalagu))
+            template = CarouselTemplate(
+                columns = [ (datalagu) ]
             )
         )
-        line_bot_api.reply_message(event.reply_token, message)
+        line_bot_api.reply_message(event.reply_token, message)  
+
 
     # elif "https://api.boteater.co/joox/single/"
 #=====[ FLEX MESSAGE ]==========
-    # elif text == "SeGame test":
+    # elif text == "yud test":
     #     message = ImagemapSendMessage(
     #         base_url="https://i.imgur.com/g8P1V9Q.jpg",
     #         alt_text="manyimak corom",
