@@ -567,7 +567,7 @@ def handle_message(event):
             jmlh = 10
         else:
             pass
-        for x in range(0,jmlh):
+        for x in range(1,jmlh):
             item = CarouselColumn(
                 thumbnail_image_url = "https://i0.wp.com/lalalafest.com/wp-content/uploads/2018/03/joox-logo-tagline-script-cmyk-2-black.png?ssl=1",
                 title = "{}".format(str(data2[x]["judul"])),
