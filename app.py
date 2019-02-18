@@ -569,7 +569,7 @@ def handle_message(event):
         for x in range(0,jmlh):
             item = MessageTemplateAction(
                 label = "{}".format(str(data2[x]["judul"])),
-                text = "!musik code {}".format(str(data2[x]["link"] != "https://api.boteater.co/joox/single/"))
+                text = "!musik code {}".format(str(data2[x]["link"]))
             ),
             datalagu.append(item)
         message = TemplateSendMessage(
@@ -577,7 +577,9 @@ def handle_message(event):
             template = ButtonsTemplate(
                 title = "SeGame Search Music",
                 text = "Powered By : JOOX\nThanks To : BOTEATER",
-                actions = (datalagu)
+                actions = [
+                    (datalagu)
+                ]
             )
         )
         line_bot_api.reply_message(event.reply_token, message)
