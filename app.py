@@ -578,7 +578,7 @@ def handle_message(event):
                 title = "SeGame Search Music",
                 text = "Powered By : JOOX\nThanks To : BOTEATER",
                 actions = [
-                    (datalagu)
+                    (str(datalagu))
                 ]
             )
         )
