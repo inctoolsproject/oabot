@@ -572,9 +572,10 @@ def handle_message(event):
                 title = "{}".format(str(data2[x]["judul"])),
                 text = "Klik lagu dibawah ini untuk mendengarkan\n{}".format(str(data2[x]["songid"])),
                 actions = [
-                    MessageTemplateAction(
+                    PostbackTemplateAction(
                         label = "{}".format(str(data2[x]["judul"])),
-                        text = "!music code {}".format(str(data2[x]["songid"]))
+                        text = "!music code {}".format(str(data2[x]["songid"])),
+                        data = "action = buy & itemid = 2"
                     )
                 ]
             ),
