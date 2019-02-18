@@ -554,45 +554,37 @@ def handle_message(event):
 #===============================
 
 # [MUSIK COMMAND]
-
     elif "!musik " in event.message.text:
         query = event.message.text.replace("!musik ","")
         r = requests.get("https://api.boteater.co/joox?search={}".format(query))
         data = r.text
         data = json.loads(data)
         data2 = data["result"]
-        jmlh = len (data2)
+        jmlh = len(data2)
         datalagu = []
-        if jmlh > 10:
-            jmlh = 10
+        if jmlh > 4:
+            jmlh = 4
         else:
             pass
         for x in range(0,jmlh):
-            num = 0
-            num += 1
-            item = CarouselColumn(
-                title = "{}".format(str(data2[x]["judul"])),
-                text = "{}".format(str(data2[x]["artis"])),
-                actions = [
-                    MessageTemplateAction(
-                        label = "{}. SHOW MUSIC".format(str(num)),
-                        text = "{}".format(str(data2[x]["link"]))
-                    )
-                ]
+            item = MessageTemplateAction(
+                label = "{}".format(str(data2[x]["judul"])),
+                text = "{}".format
             ),
             datalagu.append(item)
         message = TemplateSendMessage(
             alt_text = "SeGame Musik",
-            template = CarouselTemplate(
-                columns = [ (datalagu) ]
+            template = ButtonsTemplate(
+                title = "SeGame Search Music",
+                text = "Powered By : JOOX\nThanks To : BOTEATER",
+                actions = [(datalagu)]
             )
         )
-        line_bot_api.reply_message(event.reply_token, message)  
-
+        line_bot_api.reply_message(event.reply_token, message)
 
     # elif "https://api.boteater.co/joox/single/"
 #=====[ FLEX MESSAGE ]==========
-    # elif text == "yud test":
+    # elif text == "SeGame test":
     #     message = ImagemapSendMessage(
     #         base_url="https://i.imgur.com/g8P1V9Q.jpg",
     #         alt_text="manyimak corom",
