@@ -549,28 +549,33 @@ def handle_message(event):
 
     elif "!musik " in event.message.text:
         query = event.message.text.replace("!musik ","")
-        r = requests.get("http://api.fckveza.com/jooxmusic={}".format(query))
+        r = requests.get("http://ryns-api.herokuapp.com/joox?q={}".format(query))
         data = r.text
         data = json.loads(data)
         data2 = data["result"]
         jmlh = len (data2)
         datalagu = []
-        if jmlh > 3:
-            jmlh = 3
+        if jmlh > 10:
+            jmlh = 10
         else:
             pass
         for x in range(0,jmlh):
-            item = MessageTemplateAction(
-                label = "{}".format(str(data2[x]["judul"])),
-                text = "!music code {}".format(str(data2[x]["songid"]))
+            item = CarouselColumn(
+                thumbnail_image_url = "{}".format(str(data2[x]["img"]))
+                title = "{}".format(str(data2[x]["title"])),
+                text = "{}".format(str(data2[x]["artis"])),
+                actions = [
+                    URITemplateAction(
+                        label = "DOWNLOAD",
+                        uri = "{}".format(str(data2[x]["url"]))
+                    )
+                ]
             ),
             datalagu.append(item)
         buttons_template = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = ButtonsTemplate(
-                title = "SeGame Music",
-                text = "Powered By : Joox\nThanks to : FCK VEZA",
-                actions = [
+                columns = [
                     (str(datalagu))
                 ]
             )
