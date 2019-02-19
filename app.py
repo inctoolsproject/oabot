@@ -555,26 +555,22 @@ def handle_message(event):
         data2 = data["result"]
         jmlh = len (data2)
         datalagu = []
-        if jmlh > 10:
-            jmlh = 10
+        if jmlh > 3:
+            jmlh = 3
         else:
             pass
         for x in range(0,jmlh):
-            item = CarouselColumn(
-                title = "{}".format(str(data2[x]["judul"])),
-                text = "Klik lagu dibawah ini untuk mendengarkan\n{}".format(str(data2[x]["songid"])),
-                actions = [
-                    MessageTemplateAction(
-                        label = "{}".format(str(data2[x]["judul"])),
-                        text = "!music code {}".format(str(data2[x]["songid"]))
-                    )
-                ]
+            item = MessageTemplateAction(
+                label = "{}".format(str(data2[x]["judul"])),
+                text = "!music code {}".format(str(data2[x]["songid"]))
             ),
             datalagu.append(item)
         buttons_template = TemplateSendMessage(
             alt_text = "SeGame Musik",
-            template = CarouselTemplate(
-                columns = [
+            template = ButtonsTemplate(
+                title = "SeGame Music",
+                text = "Powered By : Joox\nThanks to : FCK VEZA",
+                actions = [
                     (str(datalagu))
                 ]
             )
