@@ -575,7 +575,7 @@ def handle_message(event):
         buttons_template = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
-                columns = (str(datalagu))
+                columns = [(str(datalagu))]
             )
         )
         line_bot_api.reply_message(event.reply_token, buttons_template)  
