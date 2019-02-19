@@ -561,7 +561,7 @@ def handle_message(event):
             pass
         for x in range(0,jmlh):
             item = CarouselColumn(
-                thumbnail_image_url = "{}".format(str(data2[x]["img"]))
+                thumbnail_image_url = "{}".format(str(data2[x]["img"])),
                 title = "{}".format(str(data2[x]["title"])),
                 text = "{}".format(str(data2[x]["artis"])),
                 actions = [
