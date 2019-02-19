@@ -566,7 +566,7 @@ def handle_message(event):
                 text = "{}".format(str(data2[x]["artis"])),
                 actions = [
                     URITemplateAction(
-                        label = "DOWNLOAD",
+                        label = "{}".format(str(data2[x]["title"])),
                         uri = "{}".format(str(data2[x]["url"]))
                     )
                 ]
