@@ -555,8 +555,8 @@ def handle_message(event):
         data2 = data["result"]
         jmlh = len(data2)
         datalagu = []
-        if jmlh > 5:
-            jmlh = 5
+        if jmlh > 10:
+            jmlh = 10
         else:
             pass
         for x in range(0,jmlh):
