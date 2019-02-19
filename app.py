@@ -574,7 +574,7 @@ def handle_message(event):
             datalagu.append(item)
         buttons_template = TemplateSendMessage(
             alt_text = "SeGame Musik",
-            template = ButtonsTemplate(
+            template = CarouselTemplate(
                 columns = [
                     (str(datalagu))
                 ]
