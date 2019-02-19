@@ -487,14 +487,6 @@ def handle_message(event):
                         label="Invite link 2",
                         uri="https://discord.gg/vMcMe8f"
                     )
-                    # URITemplateAction(
-                    #     label="2Accounts",
-                    #     uri="https://play.google.com/store/apps/details?id=com.excelliance.multiaccount"
-                    # ),
-                    # URITemplateAction(
-                    #     label="Multi clone",
-                    #     uri="https://play.google.com/store/apps/details?id=com.jumobile.multiapp"
-                    # )
                 ]
             )
         )
@@ -572,15 +564,14 @@ def handle_message(event):
                 title = "{}".format(str(data2[x]["judul"])),
                 text = "Klik lagu dibawah ini untuk mendengarkan\n{}".format(str(data2[x]["songid"])),
                 actions = [
-                    PostbackTemplateAction(
+                    MessageTemplateAction(
                         label = "{}".format(str(data2[x]["judul"])),
-                        text = "!music code {}".format(str(data2[x]["songid"])),
-                        data = "action = buy & itemid = 2"
+                        text = "!music code {}".format(str(data2[x]["songid"]))
                     )
                 ]
             ),
             datalagu.append(item)
-        message = TemplateSendMessage(
+        buttons_template = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
                 columns = [
@@ -588,7 +579,7 @@ def handle_message(event):
                 ]
             )
         )
-        line_bot_api.reply_message(event.reply_token, message)  
+        line_bot_api.reply_message(event.reply_token, buttons_template)  
 
 
     # elif "https://api.boteater.co/joox/single/"
