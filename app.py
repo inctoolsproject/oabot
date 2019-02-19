@@ -570,8 +570,9 @@ def handle_message(event):
                         uri = "{}".format(str(data2[x]["url"]))
                     )
                 ]
-            )},
-            datalagu.append(item)
+            ),
+        }
+        datalagu.append(item)
         buttons_template = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
