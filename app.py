@@ -560,7 +560,7 @@ def handle_message(event):
         else:
             pass
         for x in range(0,jmlh):
-            item = {CarouselColumn(
+            item = CarouselColumn(
                 thumbnail_image_url = "{}".format(str(data2[x]["img"])),
                 title = "{}".format(str(data2[x]["title"])),
                 text = "{}".format(str(data2[x]["artis"])),
@@ -571,14 +571,11 @@ def handle_message(event):
                     )
                 ]
             ),
-        }
-        datalagu.append(item)
+            datalagu.append(item)
         buttons_template = TemplateSendMessage(
             alt_text = "SeGame Musik",
             template = CarouselTemplate(
-                columns = [
-                    (str(datalagu))
-                ]
+                columns = (str(datalagu))
             )
         )
         line_bot_api.reply_message(event.reply_token, buttons_template)  
