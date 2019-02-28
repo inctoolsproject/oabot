@@ -89,7 +89,7 @@ def handle_message(event):
         #         event.reply_token,
         #         TextSendMessage(text="Bot can"t use profile in group chat"))
 
-    if text == "!segame-bye":
+    if text == "!coss-bye":
         if isinstance(event.source, SourceGroup):
             line_bot_api.reply_message(
                 event.reply_token, TextSendMessage(text="Bye semuanya :D"))
@@ -199,24 +199,24 @@ def handle_message(event):
             template = CarouselTemplate(
                 columns = [
                     CarouselColumn(
-                        thumbnail_image_url = "https://i.ibb.co/fpgLpGb/Se-Game-Discord-Logo.png",
-                        title = "SeGame Menu",
+                        thumbnail_image_url = "https://i.ibb.co/HPcmhCY/1551283598926.jpg",
+                        title = "COSS Menu",
                         text = "Silahkan pilih\nTekan tombol dibawah ini",
                         actions = [
                             MessageTemplateAction(
-                                label = "Random anime music",
+                                label = "Random COSS anime music",
                                 text = "!random-anime-music"
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url = "https://i.ibb.co/fpgLpGb/Se-Game-Discord-Logo.png",
-                        title = "SeGame Menu 2",
+                        thumbnail_image_url = "https://i.ibb.co/HPcmhCY/1551283598926.jpg",
+                        title = "COSS Menu 2",
                         text = "Silahkan pilih, tekan tombol dibawah ini",
                         actions = [
                             MessageTemplateAction(
                                 label = "Keluarkan bot",
-                                text = "!segame-Bye"
+                                text = "!coss-Bye"
                             )
                         ]
                     )
