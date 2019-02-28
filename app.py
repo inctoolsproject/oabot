@@ -148,13 +148,13 @@ def handle_message(event):
     #     message = TextSendMessage(text="ckk by")
     #     line_bot_api.reply_message(event.reply_token, message)
 
-     elif (text == "Bot") or (text == "bot"):
-         message = TextSendMessage(text="Siapa bot? ke bot an lu")
-         line_bot_api.reply_message(event.reply_token, message)
+    # elif (text == "Bot") or (text == "bot"):
+       #  message = TextSendMessage(text="Siapa bot? ke bot an lu")
+      #   line_bot_api.reply_message(event.reply_token, message)
 
-     elif (text == "Tes") or (text == "tes") or (text == "Test") or (text == "test"):
-         message = TextSendMessage(text="suk beybeh")
-         line_bot_api.reply_message(event.reply_token, message)
+   #  elif (text == "Tes") or (text == "tes") or (text == "Test") or (text == "test"):
+        # message = TextSendMessage(text="suk beybeh")
+       #  line_bot_api.reply_message(event.reply_token, message)
 
     # elif (text == "@") or (text == "Yud") or (text == "yud") or (text == "yudha"):
     #     message = TextSendMessage(text="Apa manggil-manggil cogan")
