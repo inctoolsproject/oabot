@@ -439,7 +439,7 @@ def handle_message(event):
                         actions=[
                             URITemplateAction(
                                 label="Qian",
-                                uri="https://line.me/ti/p/~_QIANMO_"
+                                uri="https://line.me/ti/p/~qian_bi"
                             )
                         ]
                     ),
