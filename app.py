@@ -434,7 +434,7 @@ def handle_message(event):
                     ),
                     CarouselColumn(
                         thumbnail_image_url="https://i.ibb.co/tzbrRYB/Qian.jpg",
-                        title="Founder Coss",
+                        title="Founder COSS",
                         text="@__COSSQIAN",
                         actions=[
                             URITemplateAction(
@@ -584,7 +584,7 @@ def handle_message(event):
             ),
             datalagu.append(item)
         buttons_template = TemplateSendMessage(
-            alt_text = "SeGame Musik",
+            alt_text = "COSS Musik",
             template = CarouselTemplate(
                 columns = [(str(datalagu))]
             )
@@ -799,19 +799,19 @@ def handle_message(event):
     #         )
     #     )
     #     line_bot_api.reply_message(event.reply_token, message)
-    # elif (text == "sebel") or (text == "Sebel"):
-    #     message = TemplateSendMessage(
-    #         alt_text="Yudha public bot",
-    #         template=ImageCarouselTemplate(
-    #             columns=[
-    #                 ImageCarouselColumn(
-    #                     image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52114135/IOS/sticker_animation@2x.png",
-    #                     action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
-    #                 )
-    #             ]
-    #         )
-    #     )
-    #     line_bot_api.reply_message(event.reply_token, message)
+     elif (text == "sebel") or (text == "Sebel"):
+         message = TemplateSendMessage(
+             alt_text="Yudha public bot",
+             template=ImageCarouselTemplate(
+                 columns=[
+                     ImageCarouselColumn(
+                         image_url="https://stickershop.line-scdn.net/stickershop/v1/sticker/52114135/IOS/sticker_animation@2x.png",
+                         action=URIAction(uri="http://line.me/ti/p/%40ajd1759p")
+                     )
+                 ]
+             )
+         )
+         line_bot_api.reply_message(event.reply_token, message)
 #=======================================================================================================================
 import os
 if __name__ == "__main__":
