@@ -234,38 +234,38 @@ def handle_message(event):
                 text = "silahkan pilih, tekan tombol dibawah ini",
                 actions = [
                     MessageTemplateAction(
-                        label = "About SeGame",
-                        text = "!about segame"
+                        label = "Comming soon",
+                        text = "!commingsoon"
                     ),
                     MessageTemplateAction(
                         label = "Admin List",
                         text = "!adminlist"
                     ),
                     MessageTemplateAction(
-                        label = "Our Team",
-                        text = "!our team"
+                        label = "About Coss",
+                        text = "!aboutcoss"
                     ) 
                 ]
             )
         )
         line_bot_api.reply_message(event.reply_token, buttons_template)
 
-    elif "!about segame" in event.message.text:
+    elif "!commingsoon" in event.message.text:
         token = event.reply_token
         text_message = TextSendMessage(text = "Comming Soon...")
         line_bot_api.reply_message(token, text_message)
 #=== [SEGAME TEAM] ===
-    elif (text == "!our team") or (text == "Our team") or (text == "our team") or (text == "Segame team") or (text == "SeGame team") or (text == "segame team"):
+    elif (text == "!aboutcoss") or (text == "About Coss") or (text == "about coss") or (text == "coss family") or (text == "Coss Family") or (text == "COSS"):
         token = event.reply_token
         buttons_template = TemplateSendMessage(
-            alt_text = "OUR TEAM",
+            alt_text = "COSS",
             template = ButtonsTemplate(
-                title = "SeGame Team",
-                text = "Silahkam pilih game dibawah ini",
+                title = "Community Of Smule Singers",
+                text = ".....",
                 actions = [
                     MessageTemplateAction(
-                        label = "Mobile Legend",
-                        text = "!mlbb team"
+                        label = "Terima Kasih",
+                        text = "#"
                     )
                 ]
             )
