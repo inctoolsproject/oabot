@@ -238,8 +238,8 @@ def handle_message(event):
                         text = "!commingsoon"
                     ),
                     MessageTemplateAction(
-                        label = "Admin List",
-                        text = "!adminlist"
+                        label = "Management COSS",
+                        text = "!managementcoss"
                     ),
                     MessageTemplateAction(
                         label = "About Coss",
@@ -416,9 +416,9 @@ def handle_message(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template)
 #=====[ CAROUSEL MESSAGE ]==========
-    elif (text == "!admincoss") or (text == "Admincoss") or (text == "admincoss"):
+    elif (text == "!managementcoss") or (text == "Managementcoss") or (text == "managementcoss"):
         message = TemplateSendMessage(
-            alt_text="Admin Coss",
+            alt_text="MANAGEMENT COSS",
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
@@ -433,7 +433,7 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url="https://i.ibb.co/nQkCwXQ/linepy-1547793990-2.jpg",
+                        thumbnail_image_url="https://i.ibb.co/tzbrRYB/Qian.jpg",
                         title="Founder Coss",
                         text="@__COSSQIAN",
                         actions=[
@@ -444,18 +444,18 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url="https://i.ibb.co/qgR3DxQ/Screenshot-2.png",
+                        thumbnail_image_url="https://i.ibb.co/7jQ7DRG/Need.jpg",
                         title="Co Founder COSS",
                         text="@COSS_JustNeed",
                         actions=[
                             URITemplateAction(
                                 label="Need",
-                                uri="https://line.me/ti/p/~rezafaesal22"
+                                uri="https://line.me/ti/p/~NeedMoodBooster"
                             )
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url="https://i.ibb.co/W04LVGR/73316.jpg",
+                        thumbnail_image_url="https://i.ibb.co/RhdrQnN/Mamah.jpg",
                         title="Leader COSS",
                         text="@X1N_RYN_COSS",
                         actions=[
@@ -466,12 +466,12 @@ def handle_message(event):
                         ]
                     ),
                     CarouselColumn(
-                        thumbnail_image_url="https://i.ibb.co/W04LVGR/73316.jpg",
+                        thumbnail_image_url="https://i.ibb.co/TgGyrVM/Via.jpg",
                         title="Admin COSS",
                         text="@_COSSVIACAVS_",
                         actions=[
                             URITemplateAction(
-                                label="Mamah",
+                                label="Vianita",
                                 uri="https://line.me/ti/p/~cibellin"
                             )
                         ]
