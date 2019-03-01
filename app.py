@@ -128,7 +128,7 @@ def handle_message(event):
         line_bot_api.reply_message(event.reply_token, template_message)
 
 #=====[ SEARCH ID LINE ]=============
-    elif "!idline: " in event.message.text:
+    elif "/idline: " in event.message.text:
         skss = event.message.text.replace("/idline: ", "")
         sasa = "http://line.me/R/ti/p/~" + skss
         text_message = TextSendMessage(text=sasa)
@@ -416,14 +416,14 @@ def handle_message(event):
         
         line_bot_api.reply_message(event.reply_token, buttons_template)
 #=====[ CAROUSEL MESSAGE ]==========
-    elif (text == "!adminlist") or (text == "Adminlist") or (text == "adminlist"):
+    elif (text == "!admincoss") or (text == "Admincoss") or (text == "admincoss"):
         message = TemplateSendMessage(
-            alt_text="SeGame admin list",
+            alt_text="Admin Coss",
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url="https://i.ibb.co/zhFY7jg/linepy-1548249585-3.jpg",
-                        title="SeGame Founder",
+                        thumbnail_image_url="https://i.ibb.co/nQkCwXQ/linepy-1547793990-2.jpg",
+                        title="Owner COSS",
                         text="Pendiri SeGame E-sports",
                         actions=[
                             URITemplateAction(
