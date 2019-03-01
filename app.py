@@ -422,46 +422,57 @@ def handle_message(event):
             template=CarouselTemplate(
                 columns=[
                     CarouselColumn(
-                        thumbnail_image_url="https://i.ibb.co/nQkCwXQ/linepy-1547793990-2.jpg",
+                        thumbnail_image_url="https://i.ibb.co/0J8m0Bv/Meiya.jpg",
                         title="Owner COSS",
-                        text="Pendiri SeGame E-sports",
+                        text="@COSS_JustMeiya",
                         actions=[
                             URITemplateAction(
-                                label="YunSuh",
-                                uri="https://line.me/ti/p/~YunSuh"
+                                label="Meiya",
+                                uri="https://line.me/ti/p/~justmeiya"
                             )
                         ]
                     ),
                     CarouselColumn(
                         thumbnail_image_url="https://i.ibb.co/nQkCwXQ/linepy-1547793990-2.jpg",
-                        title="SeGame Moderator",
-                        text="Pendiri bot official",
+                        title="Founder Coss",
+                        text="@__COSSQIAN",
                         actions=[
                             URITemplateAction(
-                                label="NvStar",
-                                uri="https://line.me/ti/p/~kazereborn"
+                                label="Qian",
+                                uri="https://line.me/ti/p/~_QIANMO_"
                             )
                         ]
                     ),
                     CarouselColumn(
                         thumbnail_image_url="https://i.ibb.co/qgR3DxQ/Screenshot-2.png",
-                        title="SeGame Admin",
-                        text="Admin SeGame E-sports",
+                        title="Co Founder COSS",
+                        text="@COSS_JustNeed",
                         actions=[
                             URITemplateAction(
-                                label="Abang",
+                                label="Need",
                                 uri="https://line.me/ti/p/~rezafaesal22"
                             )
                         ]
                     ),
                     CarouselColumn(
                         thumbnail_image_url="https://i.ibb.co/W04LVGR/73316.jpg",
-                        title="SeGame Admin",
-                        text="Admin SeGame E-sports",
+                        title="Leader COSS",
+                        text="@X1N_RYN_COSS",
                         actions=[
                             URITemplateAction(
-                                label="Penjual Kacang",
-                                uri="https://line.me/ti/p/~dya_sudjono"
+                                label="Mamah",
+                                uri="https://line.me/ti/p/~azzky41"
+                            )
+                        ]
+                    ),
+                    CarouselColumn(
+                        thumbnail_image_url="https://i.ibb.co/W04LVGR/73316.jpg",
+                        title="Admin COSS",
+                        text="@_COSSVIACAVS_",
+                        actions=[
+                            URITemplateAction(
+                                label="Mamah",
+                                uri="https://line.me/ti/p/~cibellin"
                             )
                         ]
                     ),
